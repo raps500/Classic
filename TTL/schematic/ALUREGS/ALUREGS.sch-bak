@@ -1,0 +1,137 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A3 16535 11693
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L TTL:74LS189 U?
+U 1 1 609E9ADC
+P 4750 3100
+F 0 "U?" H 5000 3900 50  0000 C CNN
+F 1 "74LS189" H 5000 3800 50  0000 C CNN
+F 2 "" H 4750 3100 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS189" H 4750 3100 50  0001 C CNN
+	1    4750 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3750 2700 4250 2700
+Wire Wire Line
+	4250 2800 3750 2800
+Wire Wire Line
+	3750 2900 4250 2900
+Wire Wire Line
+	5700 2800 5250 2800
+Wire Wire Line
+	5250 2700 5700 2700
+Wire Wire Line
+	3750 2600 4250 2600
+Wire Wire Line
+	5700 2900 5250 2900
+Entry Wire Line
+	3650 2500 3750 2600
+Entry Wire Line
+	3650 2600 3750 2700
+Entry Wire Line
+	3650 2700 3750 2800
+Entry Wire Line
+	3650 2800 3750 2900
+Entry Wire Line
+	3650 3000 3750 3100
+Entry Wire Line
+	3650 3100 3750 3200
+Entry Wire Line
+	3650 3200 3750 3300
+Entry Wire Line
+	3650 3300 3750 3400
+Wire Wire Line
+	3750 3100 4250 3100
+Wire Wire Line
+	4250 3200 3750 3200
+Wire Wire Line
+	3750 3300 4250 3300
+Wire Wire Line
+	4250 3400 3750 3400
+Entry Wire Line
+	5700 2600 5800 2500
+Entry Wire Line
+	5700 2800 5800 2700
+Entry Wire Line
+	5700 2900 5800 2800
+$Comp
+L power:+5V #PWR?
+U 1 1 60A294FA
+P 4750 2300
+F 0 "#PWR?" H 4750 2150 50  0001 C CNN
+F 1 "+5V" H 4765 2473 50  0000 C CNN
+F 2 "" H 4750 2300 50  0001 C CNN
+F 3 "" H 4750 2300 50  0001 C CNN
+	1    4750 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 60A29B3C
+P 4750 4000
+F 0 "#PWR?" H 4750 3750 50  0001 C CNN
+F 1 "GND" H 4755 3827 50  0000 C CNN
+F 2 "" H 4750 4000 50  0001 C CNN
+F 3 "" H 4750 4000 50  0001 C CNN
+	1    4750 4000
+	1    0    0    -1  
+$EndComp
+Text Label 3800 2600 0    50   ~ 0
+regs_imux[0]
+Wire Wire Line
+	5250 2600 5700 2600
+Entry Wire Line
+	5700 2700 5800 2600
+Text Label 3800 2700 0    50   ~ 0
+regs_imux[1]
+Text Label 3800 2800 0    50   ~ 0
+regs_imux[2]
+Text Label 3800 2900 0    50   ~ 0
+regs_imux[3]
+Text Label 5300 2600 0    50   ~ 0
+regs_q[0]
+Text Label 5300 2700 0    50   ~ 0
+regs_q[1]
+Text Label 5300 2800 0    50   ~ 0
+regs_q[2]
+Text Label 5300 2900 0    50   ~ 0
+regs_q[3]
+Text Label 3800 3100 0    50   ~ 0
+regs_a[0]
+Text Label 3800 3200 0    50   ~ 0
+regs_a[0]
+Text Label 3800 3300 0    50   ~ 0
+regs_a[0]
+Text Label 3800 3400 0    50   ~ 0
+regs_a[0]
+Wire Wire Line
+	4250 3500 3750 3500
+Wire Wire Line
+	3750 3600 4250 3600
+Wire Bus Line
+	3650 2500 3650 2800
+Wire Bus Line
+	3650 3000 3650 3300
+Wire Bus Line
+	5800 2500 5800 2800
+Text Label 3800 3500 0    50   ~ 0
+~reg_a_we
+Text Label 3800 3600 0    50   ~ 0
+~reg_a_cs
+Text Notes 4750 3150 0    50   ~ 0
+REG A
+$EndSCHEMATC

@@ -1,0 +1,32 @@
+FD //Set Command Lock
+12
+AE //Set Display OFF
+15 //Set Column Address
+00
+1F
+75 //Set Row Address
+00 // from 0
+1F // to 15 inclusive
+81 //Set Contrast Current
+27
+85 //Set Current Range
+A0 //Set Re-map and Gray Scale /Mono Mode
+13 // select mono mode * * * [Mono/~Grayscale] Vertical column increase, no remap
+A1 //Set Display Start Line
+00
+A2 //Set Display Offset
+00
+A8 //Set MUX Ratio
+1F
+B1 //Set Phase Length
+71
+B3 //Set Front Clock Divider / Oscillator
+F0
+B7 //Select Default Linear Gray Scale table
+BB //Set Pre-charge Setup
+35
+FF
+BC //Set Pre-charge voltage
+1F
+BE //Set VCOMH
+0F

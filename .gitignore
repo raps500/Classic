@@ -1,0 +1,8 @@
+verilog/testbenches/*.vcd
+verilog/testbenches/*.log
+verilog/testbenches/*.o
+TTL/testbenches/*.vcd
+TTL/testbenches/*.log
+TTL/testbenches/*.o
+TTL/testbenches/*.exe
+TTL/testbenches/*.cf
