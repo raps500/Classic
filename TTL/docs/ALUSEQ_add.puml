@@ -1,0 +1,55 @@
+@startuml ALU_sequencer_add
+Title ALU Sequencer for A = A + B   W
+clock clk with period 1
+concise "microseq" as useq
+concise "nibble" as nib
+concise "Regs operand address" as rah
+concise "REGS IMUX" as imux
+binary "REGS nOE" as oe
+binary "OP1 Latch" as op1l
+binary "OP2 Latch" as op2l
+binary "REGS nWE" as we
+@0
+useq is 0
+nib is 0
+rah is A
+imux is X
+oe is 0
+op1l is 0
+op2l is 1
+we is 1
+@+1
+useq is 1
+rah is B
+op1l is 1
+op2l is 0
+@+1
+useq is 2
+rah is X
+oe is 1
+op2l is 1
+@+1
+useq is 3
+@+1
+useq is 4
+rah is A
+imux is ADD
+we is 0
+@+1
+useq is 5
+we is 1
+imux is X
+@+1
+useq is 6
+@+1
+useq is 7
+@+1
+useq is 0
+nib is 1
+oe is 0
+op1l is 0
+@+1
+op1l is 1
+op2l is 0
+highlight 0 to 8: One nibble
+@enduml
